@@ -42,6 +42,17 @@ dependencies:
   provider: ^6.1.5
   fl_chart: ^0.71.0
   font_awesome_flutter: ^10.8.0
+  flutter_launcher_icons: ^0.14.4
+
+
+flutter_icons:
+  image_path: "assets/logo/estetica.png"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  min_sdk_android: 21
+  adaptive_icon_foreground: "assets/logo/estetica.png"
+  adaptive_icon_background: "#FFFFFF"
 
 dev_dependencies:
   flutter_test:

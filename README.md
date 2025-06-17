@@ -28,19 +28,16 @@ Este projeto é um sistema completo para clínicas de estética, desenvolvido em
 
 ---
 
-## Estrutura de pastas (resumida)
+## Como acessar o app
 
-```
-lib/
-├── core/               # Temas, constantes, utilitários
-├── domain/             # Entidades e contratos (regras de negócio)
-├── data/               # Repositórios e dados simulados
-├── providers/          # Providers usando ChangeNotifier
-├── modules/            # Módulos plugáveis: paciente, profissional, etc.
-├── pages/              # Telas do app organizadas por contexto
-├── widgets/            # Componentes reutilizáveis
-└── main.dart
-```
+Para acessar como adm adicione as seguintes credenciais:
+
+email: admin@admin.com
+senha: 123456
+
+cliente:
+email: cliente@cliente.com
+senha: 123456
 
 ---
 
@@ -53,7 +50,7 @@ lib/
 
 2. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/estetica_model.git
+   git clone https://github.com/marllondavid/estetica_model
    cd estetica_model
    ```
 

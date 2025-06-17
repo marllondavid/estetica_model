@@ -41,7 +41,7 @@ class _AdminDashboardPageState extends State<AdminDashboardPage> {
             onTap: () {
               Navigator.pop(context);
               authProvider.logout();
-              Navigator.pushReplacementNamed(context, '/');
+              Navigator.pushReplacementNamed(context, '/login');
             },
           ),
         ],

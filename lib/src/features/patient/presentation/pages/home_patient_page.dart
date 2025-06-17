@@ -1,8 +1,44 @@
 import 'package:estetica_model/src/core/constants/colors_constants.dart';
+import 'package:estetica_model/src/features/auth/presentation/providers/auth_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class HomePatientPage extends StatelessWidget {
+class HomePatientPage extends StatefulWidget {
   const HomePatientPage({super.key});
+
+  @override
+  State<HomePatientPage> createState() => _HomePatientPageState();
+}
+
+class _HomePatientPageState extends State<HomePatientPage> {
+  void _showUserOptions() {
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (context) => Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text('Perfil'),
+            onTap: () => Navigator.pushNamed(context, '/patient/perfil'),
+          ),
+          ListTile(
+            leading: const Icon(Icons.logout),
+            title: const Text('Sair'),
+            onTap: () {
+              Navigator.pop(context);
+              authProvider.logout();
+              Navigator.pushReplacementNamed(context, '/login');
+            },
+          ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +58,7 @@ class HomePatientPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
                           Text(
-                            "Dra. Alycia Maria",
+                            "Alycia Maria",
                             style: TextStyle(
                               color: ColorsConstants.primaryColor,
                               fontSize: 22,
@@ -41,10 +77,13 @@ class HomePatientPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundImage:
-                          NetworkImage("https://i.pravatar.cc/150?img=9"),
+                    GestureDetector(
+                      onTap: _showUserOptions,
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundImage:
+                            NetworkImage("https://i.pravatar.cc/150?img=10"),
+                      ),
                     ),
                   ],
                 ),
@@ -64,22 +103,22 @@ class HomePatientPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 16),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Search here...",
-                    fillColor: Colors.white,
-                    filled: true,
-                    suffixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
-                ),
-              ),
+              // const SizedBox(height: 16),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 16),
+              //   child: TextField(
+              //     decoration: InputDecoration(
+              //       hintText: "Procure aqui...",
+              //       fillColor: Colors.white,
+              //       filled: true,
+              //       suffixIcon: Icon(Icons.search),
+              //       border: OutlineInputBorder(
+              //         borderRadius: BorderRadius.circular(30),
+              //         borderSide: BorderSide.none,
+              //       ),
+              //     ),
+              //   ),
+              // ),
 
               const SizedBox(height: 24),
               Padding(
@@ -126,7 +165,7 @@ class HomePatientPage extends StatelessWidget {
                             const CircleAvatar(
                               radius: 20,
                               backgroundImage: NetworkImage(
-                                  'https://i.pravatar.cc/100?img=9'),
+                                  'https://i.pravatar.cc/100?img=10'),
                             ),
                             const SizedBox(width: 10),
                             Column(
@@ -147,7 +186,7 @@ class HomePatientPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 16),
+              const SizedBox(height: 20),
 
               // Service Categories
               const Padding(
@@ -164,7 +203,7 @@ class HomePatientPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 16),
               SizedBox(
                 height: 80,
                 child: ListView(
@@ -184,7 +223,7 @@ class HomePatientPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 16),
+              const SizedBox(height: 22),
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
