@@ -1,4 +1,4 @@
-# estetica_model - Sistema para Clínicas de Estética
+# Estetica Model - Sistema para Clínicas de Estética
 
 Este projeto é um sistema completo para clínicas de estética, desenvolvido em **Flutter** utilizando **arquitetura limpa**, **Provider** para gerenciamento de estado e **componentização modular**. Ele visa facilitar o agendamento de procedimentos, gestão de clientes, histórico de atendimentos, assinaturas de contrato e muito mais.
 
@@ -65,20 +65,14 @@ senha: 123456
    # ou para Android/iOS
    flutter run
    ```
+![Screenshot_1750187528](https://github.com/user-attachments/assets/043430f6-9c6d-4c08-9b54-e3c0ae6d6783)
+![Screenshot_1750187379](https://github.com/user-attachments/assets/255a5ac3-ebb4-4b47-9760-06a0796e7d57)
+![Screenshot_1750187361](https://github.com/user-attachments/assets/a501a75d-6109-4f8f-b5c6-dcbf8b69fa22)
+![Screenshot_1750187353](https://github.com/user-attachments/assets/c29c2b1c-9fb1-4d3f-8755-d99ff1798250)
+![Screenshot_1750187348](https://github.com/user-attachments/assets/36d097a4-2bd3-4c9a-b458-241a757a570c)
+![Screenshot_1750187343](https://github.com/user-attachments/assets/53caddc4-a4fd-42f2-af9b-fefecf6f8dbe)
+![Screenshot_1750187308](https://github.com/user-attachments/assets/35de0465-dae8-4525-ba74-edadca2d3e59)
 
----
-
-## 📈 Planejamento futuro
-
-Este projeto está em constante evolução! Algumas funcionalidades planejadas incluem:
-
-- Integração com banco de dados real
-- Login com autenticação segura
-- Integração com WhatsApp para confirmação de agendamentos
-- Dashboard com estatísticas da clínica
-- Geração de relatórios em PDF
-
----
 
 ## 👨‍💼 Autor
 
